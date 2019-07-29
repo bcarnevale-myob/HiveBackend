@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hive_backend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("hive/[controller]")]
     [ApiController]
     public class HiveController : ControllerBase
     {
@@ -14,7 +14,7 @@ namespace Hive_backend.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] {"value1", "value2"};
+            return new string[] {"player1", "player2"};
         }
 
         // GET api/values/5

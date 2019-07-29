@@ -1,4 +1,6 @@
-
+**/bin/*
+**/obj/*
+**/.idea/*
 # Created by https://www.gitignore.io/api/c,rider
 # Edit at https://www.gitignore.io/?templates=c,rider
 
