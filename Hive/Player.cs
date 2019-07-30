@@ -5,9 +5,9 @@ namespace Hive
 {
     public class Player
     {
-        public readonly IReadOnlyCollection<Creature> AvailablePieces;
+        public readonly IReadOnlyCollection<ICreature> AvailablePieces;
 
-        public Player(IReadOnlyCollection<Creature> availablePieces)
+        public Player(IReadOnlyCollection<ICreature> availablePieces)
         {
             AvailablePieces = availablePieces;
         }

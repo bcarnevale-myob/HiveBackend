@@ -11,7 +11,7 @@ namespace HiveTests
         [Fact]
         public void WhenAGameIsStartedItContainsAPlayerWithAQueenBee()
         {
-            var initialPieces = new List<Creature>() {new QueenBee()};
+            var initialPieces = new List<ICreature>() {new QueenBee()};
             var players = new Collection<Player>() {new Player(initialPieces)};
             var game = new Game(players);
             
@@ -20,5 +20,6 @@ namespace HiveTests
             Assert.Equal(1, initialState.Players.Count);
             Assert.IsType<QueenBee>(initialState.Players.Single().AvailablePieces.Single());
         }
+
     }
 }

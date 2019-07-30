@@ -1,7 +1,7 @@
 namespace Hive
 {
-    public class QueenBee : Creature
+    public class QueenBee : ICreature
     {
-        
+        public string Tile => this.GetType().Name;
     }
 }

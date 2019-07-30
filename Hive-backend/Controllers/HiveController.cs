@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Hive;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hive_backend.Controllers
 {
-    [Route("hive/[controller]")]
+    [Route("hive/")]
     [ApiController]
     public class HiveController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        [HttpGet("initialState")]
+        public GameState Get()
         {
-            return new string[] {"player1", "player2"};
+            var initialPieces = new List<ICreature>() {new QueenBee()};
+            var players = new Collection<Player>() {new Player(initialPieces)};
+            var game = new Game(players);
+            
+            return game.InitialState();
         }
 
         // GET api/values/5

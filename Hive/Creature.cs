@@ -1,6 +1,6 @@
 namespace Hive
 {
-    public interface Creature
+    public interface ICreature
     {
         
     }
